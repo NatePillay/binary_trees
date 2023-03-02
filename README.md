@@ -15,3 +15,13 @@ parent->left = newNode;
 This line sets the left field of the parent node to point to the new node. left is presumably a pointer to the left child of the parent node. By setting this field to point to the new node, we establish the link between the parent node and the new node - the new node is now the left child of the parent node.
 
 Together, these four lines of code create a new node, set its value to the given value, link it to its parent node, initialize its right field to NULL, and insert it as the left child of its parent node. This is a simple implementation of a binary tree node insertion operation.
+===============================================================
+
+
+when does the parent of the tree become NULL
+
+The parent of the root node in a binary tree is typically NULL. This is because the root node is the highest node in the tree and has no parent.
+
+In some implementations of binary trees, the parent pointer of the root node may point to a special "null" node that represents the parent of the root. In this case, the parent of the root is not NULL, but rather a special node that does not contain any data and has no children.
+
+Regardless of the implementation, it is important to check for NULL before accessing the parent of a node, since accessing the parent of the root (which may be NULL) can cause a segmentation fault or other unexpected behavior.
